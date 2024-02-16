@@ -1,6 +1,15 @@
-<div>
-  <%= link_to "Back to Gallery", notes_path %>
-  <h1><%= @note.title %></h1>
-  <p><%= @note.content %></p>
-  <%= link_to 'Edit', edit_note_path(@note) %>
+<div class="page-container w-full h-full flex flex-col justify-start items-start ">
+  <div class=" flex flex-row w-full justify-between align-center mb-12">
+    <h1 class="inline-flex gap-2 text-2xl text-purple-700 font-bold"><i class="ri-booklet-line"></i><%= @note.title %></h1>
+    <div class="flex flex-row gap-2 justify-center items-center">
+      <%= link_to "<i class='ri-arrow-left-line'></i>Back to Gallery ".html_safe, notes_path, class: 'inline-flex gap-2 mb-auto mt-auto button px-3 py-1 bg-purple-700 text-slate-100 rounded-lg' %>
+      <%= link_to "<i class='ri-quill-pen-fill'></i>Edit This Note ".html_safe, edit_note_path(@note), class: 'inline-flex gap-2 mb-auto mt-auto button-white px-3 py-1 bg-slate-200 text-purple-700 rounded-lg' %>
+      <%= button_to @note, :method => :delete, class: 'hover:bg-red-700 inline-flex justify-center items-center gap-2 button px-3 py-1 text-red-700 hover:text-slate-100 rounded-lg' do %>
+        <i class="ri-delete-bin-6-line"></i> 
+      <% end %>
+    </div>
+  </div>
+  <div class="page-container h-full w-full bg-purple-700 bg-opacity-15 rounded-xl">
+    <p class="font-medium text-justify"><%= @note.content %></p>
+  </div>
 </div>

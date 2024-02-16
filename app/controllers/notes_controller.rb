@@ -1,8 +1,8 @@
 class NotesController < ApplicationController
-  before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :set_note, only: [:show, :edit, :update, :destroy]
 
   def index
-    @notes = Note.all.order(created_at: :desc)
+    @notes = Note.all.order(updated_at: :desc)
   end
 
   def show
@@ -36,17 +36,19 @@ class NotesController < ApplicationController
   end
 
   def destroy
+    @note = Note.find(params[:id])
     @note.destroy
-    redirect_to notes_url, notice: 'Note was successfully destroyed.'
+
+    redirect_to notes_path
   end
 
   private
 
-  def set_entry
-    @note = Note.find(params[:id])
-  end
-
   def note_params
     params.require(:note).permit(:title, :content, :tag)
+  end
+
+  def set_note
+    @note = Note.find(params[:id])
   end
 end
