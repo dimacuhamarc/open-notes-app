@@ -1,21 +1,28 @@
-<%= form_with model: note do |form| %>
-  <div>
+<%= form_with model: note, class: "max-w-md mx-auto" do |form| %>
+  <div class="mb-4">
     <% note.errors.full_messages_for(:title).each do |message| %>
-      <div><%= message %></div>
+      <div class="text-red-500"><%= message %></div>
     <% end %>
   </div>
-  <div>
+  <div class="mb-4">
     <div>
-      <%= form.label :title %>
-      <%= form.text_field :title %>
-    </div>
-    <div>
-      <%= form.label :content %>
-      <%= form.text_area :content %>
-    </div>
-    <div>
-      <%= form.submit %> 
+      <%= form.label :title, class: "block text-slate-100 font-bold mb-2" %>
+      <%= form.text_field :title, class: "form-input mt-1 block w-full rounded-md" %>
     </div>
   </div>
+  <div class="mb-4">
+    <div>
+      <p class="text-slate-100 font-bold mb-2"><%= form.label :content %></p>
+      <%= form.text_area :content, class: "form-textarea h-60 mt-1 block w-full rounded-md" %>
+    </div>
+  </div>
+  <div class="mb-4">
+    <div>
+      <p class="text-slate-100 font-bold mb-2"><%= form.label :tag %></p>
+      <%= form.text_field :tag, class: "form-input mt-1 block w-full rounded-md" %>
+    </div>
+  </div>
+  <div class="mb-4">
+    <%= form.submit "Submit", class: "button inline-flex gap-2 mb-auto mt-auto px-3 py-1 bg-slate-100 text-slate-100 rounded-lg" %> 
+  </div>
 <% end %>
-<%= link_to 'Back', notes_path %>
