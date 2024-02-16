@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text-50: #f3ebfa;
+    --text-100: #e7d6f5;
+    --text-200: #cfadeb;
+    --text-300: #b785e0;
+    --text-400: #9f5cd6;
+    --text-500: #8733cc;
+    --text-600: #6c29a3;
+    --text-700: #511f7a;
+    --text-800: #361452;
+    --text-900: #1b0a29;
+    --text-950: #0e0514;
+    
+    --background-50: #f4ebfa;
+    --background-100: #e8d6f5;
+    --background-200: #d1adeb;
+    --background-300: #ba85e0;
+    --background-400: #a35cd6;
+    --background-500: #8c33cc;
+    --background-600: #7029a3;
+    --background-700: #541f7a;
+    --background-800: #381452;
+    --background-900: #1c0a29;
+    --background-950: #0e0514;
+    
+    --primary-50: #f3eafb;
+    --primary-100: #e7d4f7;
+    --primary-200: #cfaaee;
+    --primary-300: #b87fe6;
+    --primary-400: #a055dd;
+    --primary-500: #882ad5;
+    --primary-600: #6d22aa;
+    --primary-700: #521980;
+    --primary-800: #361155;
+    --primary-900: #1b082b;
+    --primary-950: #0e0415;
+    
+    --secondary-50: #faebf3;
+    --secondary-100: #f4d7e7;
+    --secondary-200: #eaaecf;
+    --secondary-300: #df86b7;
+    --secondary-400: #d45e9f;
+    --secondary-500: #c93687;
+    --secondary-600: #a12b6c;
+    --secondary-700: #792051;
+    --secondary-800: #511536;
+    --secondary-900: #280b1b;
+    --secondary-950: #14050d;
+    
+    --accent-50: #faebee;
+    --accent-100: #f4d7dd;
+    --accent-200: #eaaeba;
+    --accent-300: #df8698;
+    --accent-400: #d45e76;
+    --accent-500: #c93653;
+    --accent-600: #a12b43;
+    --accent-700: #792032;
+    --accent-800: #511521;
+    --accent-900: #280b11;
+    --accent-950: #140508;
+    
+  }
+  .dark {
+    --text-50: #0e0514;
+    --text-100: #1b0a29;
+    --text-200: #361452;
+    --text-300: #511f7a;
+    --text-400: #6c29a3;
+    --text-500: #8733cc;
+    --text-600: #9f5cd6;
+    --text-700: #b785e0;
+    --text-800: #cfadeb;
+    --text-900: #e7d6f5;
+    --text-950: #f3ebfa;
+    
+    --background-50: #0e0514;
+    --background-100: #1c0a29;
+    --background-200: #381452;
+    --background-300: #541f7a;
+    --background-400: #7029a3;
+    --background-500: #8c33cc;
+    --background-600: #a35cd6;
+    --background-700: #ba85e0;
+    --background-800: #d1adeb;
+    --background-900: #e8d6f5;
+    --background-950: #f4ebfa;
+    
+    --primary-50: #0e0415;
+    --primary-100: #1b082b;
+    --primary-200: #361155;
+    --primary-300: #521980;
+    --primary-400: #6d22aa;
+    --primary-500: #882ad5;
+    --primary-600: #a055dd;
+    --primary-700: #b87fe6;
+    --primary-800: #cfaaee;
+    --primary-900: #e7d4f7;
+    --primary-950: #f3eafb;
+    
+    --secondary-50: #14050d;
+    --secondary-100: #280b1b;
+    --secondary-200: #511536;
+    --secondary-300: #792051;
+    --secondary-400: #a12b6c;
+    --secondary-500: #c93687;
+    --secondary-600: #d45e9f;
+    --secondary-700: #df86b7;
+    --secondary-800: #eaaecf;
+    --secondary-900: #f4d7e7;
+    --secondary-950: #faebf3;
+    
+    --accent-50: #140508;
+    --accent-100: #280b11;
+    --accent-200: #511521;
+    --accent-300: #792032;
+    --accent-400: #a12b43;
+    --accent-500: #c93653;
+    --accent-600: #d45e76;
+    --accent-700: #df8698;
+    --accent-800: #eaaeba;
+    --accent-900: #f4d7dd;
+    --accent-950: #faebee;
+    
+  }
+}
+
+body {
+  @apply w-screen h-screen;
+}
+
+.page-container {
+  @apply p-12;
+}
+
+* {
+  /* outline: 1px solid red !important; */
+}
+
+.button {
+  @apply hover:bg-purple-400 transition-colors duration-300 ease-in-out cursor-pointer;
+}
+
+.bg-primary {
+  background-color: #f4f1f7;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23c3bad1' fill-opacity='0.38'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bg-hero {
+  background-color: #a250ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23700090' fill-opacity='0.38'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm9-10v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 5V0H5v5H0v1h5v94h1V6h94V5H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}

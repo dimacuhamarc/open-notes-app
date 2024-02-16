@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OpenNotesApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" %>
+  </head>
+
+  <body>
+    <main class="w-screen h-screen bg-primary">
+      <%= yield %>
+    </main>
+  </body>
+</html>

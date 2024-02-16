@@ -1,0 +1,13 @@
+{
+  "tailwindCSS.emmetCompletions": true,
+  "tailwindCSS.experimental.configFile": null,
+  "tailwindCSS.includeLanguages": {
+    "plaintext": "html",
+    "javascript": "javascript",
+    "typescript": "javascript",
+    "javascriptreact": "javascript",
+    "typescriptreact": "javascript",
+    "vue": "html",
+    "html": "html",
+    "ruby": "html",}
+}

@@ -1,0 +1,6 @@
+<div>
+  <%= link_to "Back to Gallery", notes_path %>
+  <h1><%= @note.title %></h1>
+  <p><%= @note.content %></p>
+  <%= link_to 'Edit', edit_note_path(@note) %>
+</div>
